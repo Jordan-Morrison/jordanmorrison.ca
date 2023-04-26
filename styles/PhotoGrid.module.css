@@ -1,0 +1,21 @@
+.photoGrid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photoGrid div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.photoGrid div img {
+    cursor: pointer;
+}
+
+.photoGrid div img:last-child {
+    flex-grow: 1;
+    object-fit: cover;
+}

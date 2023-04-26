@@ -1,0 +1,18 @@
+.navBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.navBar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navBar ul li:not(:last-child){
+    padding-right: 20px;
+}
