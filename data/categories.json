@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "name": "Adventure",
+        "slug": "adventure"
+    },
+    {
+        "id": 1,
+        "name": "Real Estate",
+        "slug": "real-estate"
+    },
+    {
+        "id": 2,
+        "name": "Product",
+        "slug": "product"
+    }
+]
