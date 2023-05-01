@@ -2,7 +2,7 @@ import IcomoonReact from "icomoon-react";
 import iconSet from "../icons/selection.json";
 import styles from '@/styles/NavBar.module.css';
 
-export default function Home() {
+export default function NavBar() {
 
     return (
         <div className={styles.navBar}>
@@ -10,7 +10,6 @@ export default function Home() {
                 <li>Work</li>
                 <li>Contact</li>
             </ul>
-            <h1>Jordan Morrison</h1>
             <ul>
                 <li>
                     <IcomoonReact iconSet={iconSet} size={16} icon="instagram"/>

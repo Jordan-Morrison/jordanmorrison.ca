@@ -5,3 +5,12 @@ export default function Index() {
         <Home/>
     )
 }
+
+export async function getStaticProps(context) {
+
+    console.log(context.req);
+
+    return {
+        props: {}, // will be passed to the page component as props
+    }
+}

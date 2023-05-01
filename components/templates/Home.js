@@ -1,15 +1,23 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NavBar from '@/components/organisms/NavBar';
+import Tabs from '../organisms/Tabs';
 import PhotoGrid from '../organisms/PhotoGrid';
-// import NavBar from '@/components/organisms/NavBar';
-// import CardGrid from '../organisms/CardGrid';
-// import Footer from '../organisms/Footer';
-// import Typewriter from 'typewriter-effect';
-// import { useInView } from 'react-intersection-observer';
-// import work from '@/Data/work.json';
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
+
+    const [activeTab, setActiveTab] = useState(null);
+
+    useEffect(() => {
+        let hash = decodeURI(window.location.hash.substring(1));
+        setActiveTab(hash ? hash : "adventure");
+    },[]);
+
+    const handleTabChange = (ev) => {
+        setActiveTab(ev.target.innerText.toLowerCase());
+        window.history.replaceState(null, null, `/#${encodeURI(ev.target.innerText.toLowerCase())}`);
+    };
 
     return (
         <>
@@ -20,7 +28,13 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
                 <NavBar/>
-                <PhotoGrid/>
+                <h1>Jordan Morrison</h1>
+                {activeTab &&
+                    <>
+                        <Tabs tabs={["Adventure", "Real Estate", "Product"]} activeTab={activeTab} onTabClick={handleTabChange}/>
+                        <PhotoGrid/>
+                    </>
+                }
         </>
     )
 }

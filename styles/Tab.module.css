@@ -1,0 +1,9 @@
+.tab {
+    cursor: pointer;
+    border-bottom: solid transparent 2px;
+    transition: border-bottom 100ms linear;
+}
+
+.tab.active {
+    border-bottom: solid black 2px;
+}
