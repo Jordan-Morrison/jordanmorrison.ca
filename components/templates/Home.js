@@ -27,7 +27,7 @@ export default function Home(props) {
                 {activeTab &&
                     <>
                         <Tabs tabs={categories} activeTab={activeTab} onTabClick={handleTabChange}/>
-                        <PhotoGrid/>
+                        <PhotoGrid images={props.images}/>
                     </>
                 }
         </>

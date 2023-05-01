@@ -1,14 +1,19 @@
+import { getImages } from "@/components/helpers/helpers";
 import Home from "@/components/templates/Home";
 
-export default function RealEstate() {
+export default function RealEstate(props) {
     return (
-        <Home category="real-estate"/>
+        <Home category="real-estate" images={props.images}/>
     )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
+
+    let images = await getImages("real-estate");
 
     return {
-        props: {}, // will be passed to the page component as props
+        props: {
+            images
+        }
     }
 }
