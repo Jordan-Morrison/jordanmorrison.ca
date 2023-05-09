@@ -16,3 +16,9 @@
 .navBar ul li:not(:last-child){
     padding-right: 20px;
 }
+
+.navBar a {
+    text-decoration: none;
+    color: inherit;
+    fill: var(--primary-foreground-color);
+}

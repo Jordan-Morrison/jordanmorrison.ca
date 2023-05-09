@@ -3,7 +3,7 @@ import Home from "@/components/templates/Home";
 
 export default function Index(props) {
     return (
-        <Home category="adventure" images={props.images}/>
+        <Home category="adventure" pageTitle="Adventure" images={props.images}/>
     )
 }
 

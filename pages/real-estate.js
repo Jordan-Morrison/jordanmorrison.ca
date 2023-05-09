@@ -3,7 +3,7 @@ import Home from "@/components/templates/Home";
 
 export default function RealEstate(props) {
     return (
-        <Home category="real-estate" images={props.images}/>
+        <Home category="real-estate" pageTitle="Real Estate" images={props.images}/>
     )
 }
 

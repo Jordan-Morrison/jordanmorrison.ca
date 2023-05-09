@@ -9,6 +9,7 @@
     flex-direction: column;
     gap: 10px;
     width: 30%;
+    max-width: 500px;
 }
 
 .photoGrid div img {
