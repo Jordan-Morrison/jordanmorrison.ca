@@ -5,7 +5,7 @@
 }
 
 .tab.active {
-    border-bottom: solid black 2px;
+    border-bottom: solid var(--primary-foreground-color) 2px;
 }
 
 .tab a {
